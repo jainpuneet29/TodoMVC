@@ -69,9 +69,6 @@ Test Reports:
 Playwright Reports: By default, Playwright generates a test report that can be accessed via the playwright-report directory. To view the report:
 npx playwright show-report
 
-Continuous Integration:
-Tests are integrated with CI/CD pipelines (e.g., GitHub Actions) to ensure automated testing on code changes. Reports are generated and archived for each build.
-
 Important Considerations
 Data Privacy: Ensure test data complies with data privacy laws and regulations.
 
