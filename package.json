@@ -1,0 +1,14 @@
+{
+  "name": "todomvc",
+  "version": "1.0.0",
+  "description": "To-Do Functionality Testing with TypeScript, POM, and Playwright\r Overview\r This README provides a comprehensive guide to the testing framework for the to-do functionality website. It outlines the test cases, testing patterns, organizational structure, reporting mechanisms, and other essential details.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0"
+  }
+}
