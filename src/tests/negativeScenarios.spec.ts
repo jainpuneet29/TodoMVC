@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { TodoPage } from '../pages/ToDoPage';
+import { TodoPage } from '../pages/TodoPage';
 import { config } from '../../utils/testConfig';
 
 let todoPage: TodoPage;
