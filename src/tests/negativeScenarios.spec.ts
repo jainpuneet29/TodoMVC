@@ -1,16 +1,19 @@
 import { test, expect } from '@playwright/test';
 import { TodoPage } from '../pages/TodoPage';
 import { config } from '../../utils/testConfig';
+import { chromium } from 'playwright';
 
 let todoPage: TodoPage;
 
-test.beforeEach(async ({ page }) => {
+test.beforeEach(async () => {
+    const browser = await chromium.launch({ headless: false, channel: 'chrome' }); 
+    const context = await browser.newContext(); 
+    const page = await context.newPage();
     todoPage = new TodoPage(page);
     await todoPage.navigate(config.baseURL);
     expect(page).toHaveTitle('TodoMVC: React');
     expect(await todoPage.getText('h1'), 'Header of the home page is not correct.').toEqual('todos'); 
 });
-
 
 test('user should not be able to add a new task without description', async () => {
     const taskName = '';
